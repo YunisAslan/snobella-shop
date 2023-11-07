@@ -12207,4 +12207,117 @@ textarea.form-control-lg {
   height: 0.75rem;
   border-radius: 0.5rem;
   background-color: #df4244;
+}
+
+.nav {
+  width: 1530px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #007878;
+}
+
+.phone ul li {
+  margin-left: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.phone ul li .img {
+  width: 24px;
+  height: 24px;
+  transform: rotate(90deg);
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+.phone ul li p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+}
+
+.content ul li {
+  margin-left: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.text h1 {
+  color: #000;
+  font-family: Palanquin;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.input-group {
+  width: 500px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #f7f9fc;
+  position: relative;
+  border-radius: 5px;
+}
+.input-group input {
+  color: #aaa;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding-right: 40px;
+}
+.input-group img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.nav-icon ul li {
+  margin-left: 20px;
+}
+.nav-icon ul li img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.nav-icon ul li a {
+  color: #2e2e2e;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+
+.links ul li {
+  margin-right: 54px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.links ul li a {
+  color: #273142;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%; /* 27.2px */
 }/*# sourceMappingURL=main.css.map */
