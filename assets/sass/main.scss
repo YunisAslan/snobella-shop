@@ -1,0 +1,25 @@
+// base styles
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/breakpoints";
+
+// theme style
+// @import "./themes/theme";
+
+// vendors style
+@import "./vendors/bootstrap";
+
+// utils style
+@import "./utils/variables";
+@import "./utils/extends";
+@import "./utils/mixin";
+
+// components style
+@import "./components/button";
+
+// layout style
+@import "./layout/header";
+@import "./layout/footer";
+
+// pages style
+@import "./pages/home";
