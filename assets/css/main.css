@@ -12258,8 +12258,12 @@ textarea.form-control-lg {
 }
 .hero-section .swiper-pagination-wrapper {
   position: relative;
-  right: 45%;
   padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .hero-section .swiper-pagination-wrapper {
+    right: 45%;
+  }
 }
 .hero-section .swiper-pagination-wrapper .swiper-pagination .swiper-pagination-bullet {
   width: 0.75rem;

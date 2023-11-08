@@ -77,8 +77,11 @@
 
   .swiper-pagination-wrapper {
     position: relative;
-    right: 45%;
     padding: 1.5rem;
+
+    @include md {
+      right: 45%;
+    }
 
     .swiper-pagination {
       .swiper-pagination-bullet {
