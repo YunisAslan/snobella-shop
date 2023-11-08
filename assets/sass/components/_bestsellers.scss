@@ -1,5 +1,6 @@
-.featured-products {
+.bestseller-products {
   padding: 4.5rem 0;
+  background-color: #fff7f7;
 
   .products-info-top {
     padding-bottom: 2rem;
@@ -29,6 +30,10 @@
         height: 24px;
       }
     }
+  }
+
+  .product-card {
+    background-color: $light-color !important;
   }
 
   .products-swiper {
