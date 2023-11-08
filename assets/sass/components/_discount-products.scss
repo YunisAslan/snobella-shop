@@ -1,0 +1,66 @@
+.discount-products {
+  padding: 4.5rem 0;
+
+  .products-info-top {
+    padding-bottom: 2rem;
+
+    h2 {
+      color: #000;
+      font-family: $rubik;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 0;
+
+      @include lg {
+        font-size: 2rem;
+      }
+    }
+
+    a {
+      color: #000;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .products-swiper {
+    padding: 0 1.75rem;
+  }
+
+  // products card styles come from _card.scss
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $light-color;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #ebebeb;
+
+    &::before,
+    &::after {
+      content: "" !important;
+    }
+  }
+
+  .swiper-navigation-wrapper {
+  }
+
+  .swiper-button-next {
+    background-image: url("/assets/media/icons/right-arrow.svg");
+  }
+
+  .swiper-button-prev {
+    background-image: url("/assets/media/icons/left-arrow.svg");
+  }
+}
