@@ -4,4 +4,3 @@ const swiper = new Swiper(".hero-swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-});
