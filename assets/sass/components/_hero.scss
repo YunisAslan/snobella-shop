@@ -41,6 +41,7 @@
     }
 
     .shop-now {
+      margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,7 +73,7 @@
 
   .swiper-pagination-wrapper {
     position: relative;
-    right: 38%;
+    right: 45%;
     padding: 1.5rem;
 
     .swiper-pagination {
