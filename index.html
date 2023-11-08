@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- og css -->
@@ -15,70 +19,71 @@
     <!-- ========== Start Header ========== -->
     <header class="nav">
         <div class="container">
-          <div class="hdr d-flex justify-content-between">
-            <div class="phone">
-              <ul class="d-flex justify-content-center">
-                <li class="img"><img src="./assets/media/icons/phone.svg" alt="Phone Icon"></li>
-                <li>
-                  <p>+748 383 23 14</p>
-                </li>
-              </ul>
+            <div class="hdr d-flex justify-content-between">
+                <div class="phone">
+                    <ul class="d-flex justify-content-center">
+                        <li class="img"><img src="./assets/media/icons/phone.svg" alt="Phone Icon"></li>
+                        <li>
+                            <p>+748 383 23 14</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul class="d-flex justify-content-center">
+                        <li><a>Terms of Use</a></li>
+                        <li>|</li>
+                        <li><a>FAQ</a></li>
+                        <li>|</li>
+                        <li><a>Customer service</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="content">
-              <ul class="d-flex justify-content-center">
-                <li><a>Terms of Use</a></li>
-                <li>|</li>
-                <li><a>FAQ</a></li>
-                <li>|</li>
-                <li><a>Customer service</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </header>
-      <nav class="navbar">
+    </header>
+    <nav class="navbar">
         <div class="container">
-          <div class="row">
-            <div class="col-4 text">
-              <h1>Snobella</h1>
+            <div class="row">
+                <div class="col-4 text">
+                    <h1>Snobella</h1>
+                </div>
+                <div class="col-4">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search all products"
+                            id="example-search-input">
+                        <img src="./assets/media/icons/search.svg" alt="Search Icon">
+                    </div>
+                </div>
+                <div class="col-4 nav-icon">
+                    <ul class="d-flex justify-content-center">
+                        <li>
+                            <img src="./assets/media/icons/user.svg" alt="User Icon">
+                            <a>Sign up</a>
+                        </li>
+                        <li>
+                            <img src="./assets/media/icons/heart.svg" alt="Heart Icon">
+                            <a>Wishlist</a>
+                        </li>
+                        <li>
+                            <img src="./assets/media/icons/bag.svg" alt="Bag Icon">
+                            <a>Basket</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-4">
-              <div class="input-group">
-                <input class="form-control" type="search" placeholder="Search all products" id="example-search-input">
-                <img src="./assets/media/icons/search.svg" alt="Search Icon">
-              </div>
+            <div class="link d-flex justify-content-between">
+                <div class="links">
+                    <ul class="d-flex justify-content-center">
+                        <li><a href="#">Evening bags</a></li>
+                        <li><a href="#">Shoulder bag</a></li>
+                        <li><a href="#">Backpack</a></li>
+                        <li><a href="#">Handbag</a></li>
+                        <li><a href="#">Postman bag</a></li>
+                        <li><a href="#">Belt bags</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-4 nav-icon">
-              <ul class="d-flex justify-content-center">
-                <li>
-                  <img src="./assets/media/icons/user.svg" alt="User Icon">
-                  <a>Sign up</a>
-                </li>
-                <li>
-                  <img src="./assets/media/icons/heart.svg" alt="Heart Icon">
-                  <a>Wishlist</a>
-                </li>
-                <li>
-                  <img src="./assets/media/icons/bag.svg" alt="Bag Icon">
-                  <a>Basket</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="link d-flex justify-content-between">
-            <div class="links">
-              <ul class="d-flex justify-content-center">
-                <li><a href="#">Evening bags</a></li>
-                <li><a href="#">Shoulder bag</a></li>
-                <li><a href="#">Backpack</a></li>
-                <li><a href="#">Handbag</a></li>
-                <li><a href="#">Postman bag</a></li>
-                <li><a href="#">Belt bags</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </nav>
+    </nav>
     <!-- ========== End Header ========== -->
 
 
@@ -185,90 +190,95 @@
         </section>
         <!-- ========== End Hero Section ========== -->
 
-      <!-- ========== Start Sevices Section ========== -->
-      <section class="services-section">
-        <div class="container services ">
-            <div class="row">
-                <div class="col-3 col-xl-3 ">
-                    <img src="./assets/media/icons/bus.svg">
-                    <span>Guaranteed delivery</span>
-                </div>
-                <div class="col-3 col-xl-3 ">
-                    <img src="./assets/media/icons/arrowright.svg">
-                    <span>Do not come back</span>
-
-                </div>
-                <div class="col-3 col-xl-3 ">
-                    <img src="./assets/media/icons/key.svg">
-                    <span>Safe and secure shopping</span>
-
-                </div>
-                <div class="col-3 col-xl-3 ">
-                    <img src="./assets/media/icons/card.svg">
-                    <span>Payment at the door or online</span></div>
-            </div>
-    
-            
-        </div>
-      </section>
-      
-      <!-- ========== End Sevices Section ========== -->
-      <!-- ========== Start Bag Section ========== -->
-      <section class="bag-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <div class="box">
-                        <h3>Shoulder bags</h3>
-                       <div class="box-img">
-                        <img src="https://s3-alpha-sig.figma.com/img/b839/a54f/f97d06f597194b320a854d249de3f8ac?Expires=1700438400&Signature=ZbbvNjvh88auzKVtOvS0B2HUozDf5ip0MFYZKm9xbbDM7OF2a5M12lK53ETWdOYQ4O55O8vAqPKXQs8qFB7Wfz~G5iKVro3ZpA27TffoNPhLwrZbCo-TxHZJapY~21anUZKGXdDC2kEPwNWa4J4V4ZCbFAXdGXujHaM3j81686-lxkxCVSjtMrBvVY7YwvyH6-xeiXDfoPkjp3IOu~1sBDCt5ZJ7Jdryc~eeoFwIhQHz1uH8QYRwPiBJkkPgvVjYNT~lslO8pcOOwIPN5tQf5EInmVUHExkLgw1RN1jftVOS5Z4U1m6WwMXQ9GiIbctM9gLjZfRWlObMVtfwbRMHFQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                       </div>
+        <!-- ========== Start Sevices Section ========== -->
+        <section class="services-section">
+            <div class="container services ">
+                <div class="row">
+                    <div class="col-3 col-xl-3 ">
+                        <img src="./assets/media/icons/bus.svg">
+                        <span>Guaranteed delivery</span>
+                    </div>
+                    <div class="col-3 col-xl-3 ">
+                        <img src="./assets/media/icons/arrowright.svg">
+                        <span>Do not come back</span>
 
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="box">
-                        <h3>Hand bag</h3>
-                        <div class="box-img">
-                            <img src="https://s3-alpha-sig.figma.com/img/b839/a54f/f97d06f597194b320a854d249de3f8ac?Expires=1700438400&Signature=ZbbvNjvh88auzKVtOvS0B2HUozDf5ip0MFYZKm9xbbDM7OF2a5M12lK53ETWdOYQ4O55O8vAqPKXQs8qFB7Wfz~G5iKVro3ZpA27TffoNPhLwrZbCo-TxHZJapY~21anUZKGXdDC2kEPwNWa4J4V4ZCbFAXdGXujHaM3j81686-lxkxCVSjtMrBvVY7YwvyH6-xeiXDfoPkjp3IOu~1sBDCt5ZJ7Jdryc~eeoFwIhQHz1uH8QYRwPiBJkkPgvVjYNT~lslO8pcOOwIPN5tQf5EInmVUHExkLgw1RN1jftVOS5Z4U1m6WwMXQ9GiIbctM9gLjZfRWlObMVtfwbRMHFQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                        </div>
+                    <div class="col-3 col-xl-3 ">
+                        <img src="./assets/media/icons/key.svg">
+                        <span>Safe and secure shopping</span>
 
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="box">
-                        <h3>Backpack</h3>
-                       <div class="box-img">
-                        <img src="https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1700438400&Signature=FTfP6dj8MbLpXLj1Py8~Y4ivcLaVFQqzcqpMB9R48arQt2SCl7VH8mgnu048ExXQlL~~NrM-5kkGBGWfURdo4PlLYP9VJp01OtCjRhcU1hT~PBPYb78BO3164xSHOAOWXd3Ix2lyaU9EZc24ns041I-pEk0Qkrn6HVo6DpjRYyOwacZIrzSK4FySSgpiLd8OnrTN5m-3HjeC0yvZjOOwQhFr1EEGFdWxRxXfX6ETCUloAz9O3oNrIO9PMT8H63kCrWjlu0dqDll~Eo~FHZZI26mILvmBV9fOPiaS4JkjrgwgrN2Ob3sjXTft6wQM5O4RvqLyCA2AqrrJdsfRnaow8Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                       </div>
-
+                    <div class="col-3 col-xl-3 ">
+                        <img src="./assets/media/icons/card.svg">
+                        <span>Payment at the door or online</span>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="box">
-                        <h3>Evenings bags</h3>
-                        <div class="box-img">
-                            <img src="https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1700438400&Signature=FTfP6dj8MbLpXLj1Py8~Y4ivcLaVFQqzcqpMB9R48arQt2SCl7VH8mgnu048ExXQlL~~NrM-5kkGBGWfURdo4PlLYP9VJp01OtCjRhcU1hT~PBPYb78BO3164xSHOAOWXd3Ix2lyaU9EZc24ns041I-pEk0Qkrn6HVo6DpjRYyOwacZIrzSK4FySSgpiLd8OnrTN5m-3HjeC0yvZjOOwQhFr1EEGFdWxRxXfX6ETCUloAz9O3oNrIO9PMT8H63kCrWjlu0dqDll~Eo~FHZZI26mILvmBV9fOPiaS4JkjrgwgrN2Ob3sjXTft6wQM5O4RvqLyCA2AqrrJdsfRnaow8Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                        </div>
 
-                    </div>
-                </div>
-                <div class="next-icon">
-                  <img src="./assets/media/icons/next.svg">
-                </div>
-
-                
 
             </div>
-        </div>
+        </section>
 
-      </section>
-      
-      
-      <!-- ========== End  bag Section ========== -->
+        <!-- ========== End Sevices Section ========== -->
+        <!-- ========== Start Bag Section ========== -->
+        <section class="bag-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box">
+                            <h3>Shoulder bags</h3>
+                            <div class="box-img">
+                                <img
+                                    src="https://s3-alpha-sig.figma.com/img/b839/a54f/f97d06f597194b320a854d249de3f8ac?Expires=1700438400&Signature=ZbbvNjvh88auzKVtOvS0B2HUozDf5ip0MFYZKm9xbbDM7OF2a5M12lK53ETWdOYQ4O55O8vAqPKXQs8qFB7Wfz~G5iKVro3ZpA27TffoNPhLwrZbCo-TxHZJapY~21anUZKGXdDC2kEPwNWa4J4V4ZCbFAXdGXujHaM3j81686-lxkxCVSjtMrBvVY7YwvyH6-xeiXDfoPkjp3IOu~1sBDCt5ZJ7Jdryc~eeoFwIhQHz1uH8QYRwPiBJkkPgvVjYNT~lslO8pcOOwIPN5tQf5EInmVUHExkLgw1RN1jftVOS5Z4U1m6WwMXQ9GiIbctM9gLjZfRWlObMVtfwbRMHFQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <h3>Hand bag</h3>
+                            <div class="box-img">
+                                <img
+                                    src="https://s3-alpha-sig.figma.com/img/b839/a54f/f97d06f597194b320a854d249de3f8ac?Expires=1700438400&Signature=ZbbvNjvh88auzKVtOvS0B2HUozDf5ip0MFYZKm9xbbDM7OF2a5M12lK53ETWdOYQ4O55O8vAqPKXQs8qFB7Wfz~G5iKVro3ZpA27TffoNPhLwrZbCo-TxHZJapY~21anUZKGXdDC2kEPwNWa4J4V4ZCbFAXdGXujHaM3j81686-lxkxCVSjtMrBvVY7YwvyH6-xeiXDfoPkjp3IOu~1sBDCt5ZJ7Jdryc~eeoFwIhQHz1uH8QYRwPiBJkkPgvVjYNT~lslO8pcOOwIPN5tQf5EInmVUHExkLgw1RN1jftVOS5Z4U1m6WwMXQ9GiIbctM9gLjZfRWlObMVtfwbRMHFQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <h3>Backpack</h3>
+                            <div class="box-img">
+                                <img
+                                    src="https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1700438400&Signature=FTfP6dj8MbLpXLj1Py8~Y4ivcLaVFQqzcqpMB9R48arQt2SCl7VH8mgnu048ExXQlL~~NrM-5kkGBGWfURdo4PlLYP9VJp01OtCjRhcU1hT~PBPYb78BO3164xSHOAOWXd3Ix2lyaU9EZc24ns041I-pEk0Qkrn6HVo6DpjRYyOwacZIrzSK4FySSgpiLd8OnrTN5m-3HjeC0yvZjOOwQhFr1EEGFdWxRxXfX6ETCUloAz9O3oNrIO9PMT8H63kCrWjlu0dqDll~Eo~FHZZI26mILvmBV9fOPiaS4JkjrgwgrN2Ob3sjXTft6wQM5O4RvqLyCA2AqrrJdsfRnaow8Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <h3>Evenings bags</h3>
+                            <div class="box-img">
+                                <img
+                                    src="https://s3-alpha-sig.figma.com/img/7529/9645/5652baba89f40da1967f408bcdb1ee23?Expires=1700438400&Signature=FTfP6dj8MbLpXLj1Py8~Y4ivcLaVFQqzcqpMB9R48arQt2SCl7VH8mgnu048ExXQlL~~NrM-5kkGBGWfURdo4PlLYP9VJp01OtCjRhcU1hT~PBPYb78BO3164xSHOAOWXd3Ix2lyaU9EZc24ns041I-pEk0Qkrn6HVo6DpjRYyOwacZIrzSK4FySSgpiLd8OnrTN5m-3HjeC0yvZjOOwQhFr1EEGFdWxRxXfX6ETCUloAz9O3oNrIO9PMT8H63kCrWjlu0dqDll~Eo~FHZZI26mILvmBV9fOPiaS4JkjrgwgrN2Ob3sjXTft6wQM5O4RvqLyCA2AqrrJdsfRnaow8Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="next-icon">
+                        <img src="./assets/media/icons/next.svg">
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ========== End  bag Section ========== -->
 
         <!-- ========== Start Featured Products Section ========== -->
-        <section class="featured-products my-5">
+        <section class="featured-products">
             <div class="container">
 
                 <div class="products-info-top d-flex align-items-center justify-content-between">
@@ -287,8 +297,8 @@
                                         <span>New</span>
                                     </div>
 
-                                    <button class="border-0 bg-transparent" style="color: #DF4244;">
-                                        <img src="./assets/media/icons/heart.svg" alt="">
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
                                     </button>
                                 </div>
 
@@ -326,8 +336,8 @@
                                         <span>New</span>
                                     </div>
 
-                                    <button class="border-0 bg-transparent" style="color: #DF4244;">
-                                        <img src="./assets/media/icons/heart.svg" alt="">
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
                                     </button>
                                 </div>
 
@@ -365,8 +375,8 @@
                                         <span>New</span>
                                     </div>
 
-                                    <button class="border-0 bg-transparent" style="color: #DF4244;">
-                                        <img src="./assets/media/icons/heart.svg" alt="">
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
                                     </button>
                                 </div>
 
@@ -404,8 +414,8 @@
                                         <span>New</span>
                                     </div>
 
-                                    <button class="border-0 bg-transparent" style="color: #DF4244;">
-                                        <img src="./assets/media/icons/heart.svg" alt="">
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
                                     </button>
                                 </div>
 
@@ -448,6 +458,187 @@
 
         </section>
         <!-- ========== End Featured Products Section ========== -->
+
+
+        <!-- ========== Start Bestseller Products Section ========== -->
+        <section class="bestseller-products">
+            <div class="container">
+
+                <div class="products-info-top d-flex align-items-center justify-content-between">
+                    <h2>Bestseller</h2>
+
+                    <a href="#">View all products <img src="./assets/media/icons/right-arrow.svg" alt=""></a>
+                </div>
+
+                <div class="swiper products-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="product-feat">
+                                        <span>New</span>
+                                    </div>
+
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+
+                                <div class="img-wrapper">
+                                    <img src="./assets/media/images/bestseller-product-1.svg" alt="">
+                                </div>
+
+                                <div class="product-info">
+                                    <ul class="stars d-flex pb-2 column-gap-2">
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                    </ul>
+                                    <p>Shoulder Bag Leather Bag Leather
+                                        undertakes laborious physical physical</p>
+
+                                    <div class="price-discount">
+                                        <p>$130.00<span>From $340.00</span></p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button class="add-to-card-btn">Add to card</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="product-feat">
+                                        <span>New</span>
+                                    </div>
+
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+
+                                <div class="img-wrapper">
+                                    <img src="./assets/media/images/bestseller-product-1.svg" alt="">
+                                </div>
+
+                                <div class="product-info">
+                                    <ul class="stars d-flex pb-2 column-gap-2">
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                    </ul>
+                                    <p>Shoulder Bag Leather Bag Leather
+                                        undertakes laborious physical physical</p>
+
+                                    <div class="price-discount">
+                                        <p>$130.00<span>From $340.00</span></p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button class="add-to-card-btn">Add to card</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="product-feat">
+                                        <span>New</span>
+                                    </div>
+
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+
+                                <div class="img-wrapper">
+                                    <img src="./assets/media/images/bestseller-product-1.svg" alt="">
+                                </div>
+
+                                <div class="product-info">
+                                    <ul class="stars d-flex pb-2 column-gap-2">
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                    </ul>
+                                    <p>Shoulder Bag Leather Bag Leather
+                                        undertakes laborious physical physical</p>
+
+                                    <div class="price-discount">
+                                        <p>$130.00<span>From $340.00</span></p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button class="add-to-card-btn">Add to card</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="product-feat">
+                                        <span>New</span>
+                                    </div>
+
+                                    <button class="border-0 bg-transparent heart-btn">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+
+                                <div class="img-wrapper">
+                                    <img src="./assets/media/images/bestseller-product-1.svg" alt="">
+                                </div>
+
+                                <div class="product-info">
+                                    <ul class="stars d-flex pb-2 column-gap-2">
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                        <li><img src="./assets/media/icons/star.svg" alt=""></li>
+                                    </ul>
+                                    <p>Shoulder Bag Leather Bag Leather
+                                        undertakes laborious physical physical</p>
+
+                                    <div class="price-discount">
+                                        <p>$130.00<span>From $340.00</span></p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button class="add-to-card-btn">Add to card</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-navigation-wrapper">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ========== End Bestseller Products Section ========== -->
 
 
     </main>
