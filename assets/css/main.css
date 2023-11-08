@@ -12438,6 +12438,61 @@ textarea.form-control-lg {
   background-image: url("/assets/media/icons/left-arrow.svg");
 }
 
+.discount-products {
+  padding: 4.5rem 0;
+}
+.discount-products .products-info-top {
+  padding-bottom: 2rem;
+}
+.discount-products .products-info-top h2 {
+  color: #000;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .discount-products .products-info-top h2 {
+    font-size: 2rem;
+  }
+}
+.discount-products .products-info-top a {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.discount-products .products-info-top a img {
+  width: 24px;
+  height: 24px;
+}
+.discount-products .products-swiper {
+  padding: 0 1.75rem;
+}
+.discount-products .swiper-button-next,
+.discount-products .swiper-button-prev {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #ebebeb;
+}
+.discount-products .swiper-button-next::before, .discount-products .swiper-button-next::after,
+.discount-products .swiper-button-prev::before,
+.discount-products .swiper-button-prev::after {
+  content: "" !important;
+}
+.discount-products .swiper-button-next {
+  background-image: url("/assets/media/icons/right-arrow.svg");
+}
+.discount-products .swiper-button-prev {
+  background-image: url("/assets/media/icons/left-arrow.svg");
+}
+
 .nav {
   width: 100%;
   background: #007878;
