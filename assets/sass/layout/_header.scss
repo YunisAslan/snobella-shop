@@ -9,6 +9,8 @@
     align-items: center;
 
     .hdr {
+      width: 100%;
+      padding: 0.75rem 0;
       display: flex;
       justify-content: space-between;
 
@@ -20,15 +22,14 @@
           .img {
             width: 24px;
             height: 24px;
-            transform: rotate(90deg);
+            margin-right: 0.75rem;
           }
 
-          p {
+          a {
             color: rgba(255, 255, 255, 0.9);
             font-family: $font-family;
             font-size: $font-size-regular;
             font-weight: $font-weight-medium;
-            line-height: 170%;
           }
         }
       }
@@ -37,13 +38,16 @@
         ul {
           display: flex;
           justify-content: center;
+          column-gap: 1.1rem;
 
           li {
             color: rgba(255, 255, 255, 0.75);
-            font-family: $font-family;
-            font-size: $font-size-regular;
-            font-weight: $font-weight-medium;
-            line-height: 120%;
+            a {
+              color: rgba(255, 255, 255, 0.75);
+              font-family: $font-family;
+              font-size: $font-size-regular;
+              font-weight: $font-weight-medium;
+            }
           }
         }
       }
@@ -56,69 +60,80 @@
 
   .container {
     .row {
-      .col-4.text {
+      width: 100%;
+
+      .col-3.text {
         h1 {
-          color: #000;
-          font-family: "Palanquin", sans-serif;
-          font-size: 40px;
-          font-weight: $font-weight-bold;
-          line-height: 100%;
+          a {
+            color: #000;
+            font-family: $palanquin;
+            font-size: 40px;
+            font-weight: $font-weight-bold;
+            line-height: 100%;
+          }
         }
       }
 
-      .col-4 {
+      .col-5 {
         display: flex;
+        align-items: center;
         flex-direction: row;
 
         .input-group {
           flex-grow: 1;
           height: 48px;
-          border-radius: 8px;
-          background: #f7f9fc;
           position: relative;
           border-radius: 5px;
 
           input.form-control {
-            color: #aaa;
+            background: #f7f9fc;
+            border: none;
             font-family: $font-family;
             font-size: $font-size-regular;
             font-weight: $font-weight-medium;
-            line-height: 120%;
             padding-right: 40px;
+
+            &::placeholder {
+              color: #aaa;
+            }
           }
 
           img {
             width: 24px;
             height: 24px;
             position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
+            right: 1rem;
+            top: calc(50% - 12px);
           }
         }
+      }
 
-        .nav-icon {
+      .nav-icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        ul {
           display: flex;
-          align-items: center;
+          justify-content: center;
 
-          ul {
-            display: flex;
-            justify-content: center;
+          li {
+            margin-left: 20px;
 
-            li {
-              margin-left: 20px;
+            img {
+              width: 24px;
+              height: 24px;
+            }
 
-              img {
-                width: 24px;
-                height: 24px;
-              }
+            a {
+              color: #2e2e2e;
+              font-family: $font-family;
+              font-size: $font-size-regular;
+              font-weight: $font-weight-medium;
+              line-height: 120%;
 
-              a {
-                color: #2e2e2e;
-                font-family: $font-family;
-                font-size: $font-size-regular;
-                font-weight: $font-weight-medium;
-                line-height: 120%;
+              span {
+                margin-left: 0.2rem;
               }
             }
           }
