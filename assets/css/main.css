@@ -12227,7 +12227,6 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 .hero-section__content .shop-now {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12239,8 +12238,14 @@ textarea.form-control-lg {
   border: 1px solid #206363;
   width: 12rem;
   height: 3.25rem;
-  transition: all 400ms ease;
+  margin: 0 auto;
   margin-top: 1.5rem;
+  transition: all 400ms ease;
+}
+@media (min-width: 992px) {
+  .hero-section__content .shop-now {
+    margin: 1.5rem 0 0;
+  }
 }
 .hero-section__content .shop-now:hover {
   background-color: #fff;
@@ -12326,26 +12331,24 @@ textarea.form-control-lg {
 
 .services-section {
   width: 100%;
-  height: 110px;
-  flex-shrink: 0;
   background: #f7f7f7;
+  overflow: hidden;
 }
-.services-section .container img {
+.services-section .services {
+  padding: 3.3rem 0;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+.services-section .services img {
   width: 48px;
   height: 48px;
-  flex-shrink: 0;
 }
-.services-section .container span {
+.services-section .services span {
   color: #000;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 170%; /* 27.2px */
-}
-
-.services {
-  padding-top: 34px;
+  text-wrap: nowrap;
 }
 
 .box {
