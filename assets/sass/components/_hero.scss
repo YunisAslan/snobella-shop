@@ -41,7 +41,6 @@
     }
 
     .shop-now {
-      margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -53,8 +52,13 @@
       border: 1px solid #206363;
       width: 12rem;
       height: 3.25rem;
-      transition: all 400ms ease;
+      margin: 0 auto;
       margin-top: 1.5rem;
+      transition: all 400ms ease;
+
+      @include lg {
+        margin: 1.5rem 0 0;
+      }
 
       &:hover {
         background-color: $light-color;
