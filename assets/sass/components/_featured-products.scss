@@ -1,0 +1,115 @@
+.featured-products {
+  .products-info-top {
+    h2 {
+      color: #000;
+      font-family: $rubik;
+      font-size: 2rem;
+      font-weight: 500;
+      padding-bottom: 1.5rem;
+    }
+
+    a {
+      color: #000;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+
+  .products-swiper {
+    padding: 0 1.75rem;
+  }
+
+  .product-card {
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    padding: 1rem;
+
+    .product-feat {
+      border-radius: 0.5rem;
+      background: #43d167;
+      color: $light-color;
+      font-family: $poppins;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.2rem 1rem;
+    }
+
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 220px;
+        height: 100%;
+      }
+    }
+
+    .product-info {
+      p {
+        color: #000;
+        font-family: $rubik;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .price-discount {
+        p {
+          color: $primary-color;
+          font-family: $poppins;
+          font-size: 1.25rem;
+          font-weight: 600;
+
+          span {
+            display: inline-block;
+            padding-left: 1rem;
+            color: rgba(54, 54, 54, 0.75);
+            font-family: $poppins;
+            font-size: 1rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .add-to-card-btn {
+      width: 100%;
+      padding: 0.6rem 0;
+      border-radius: 0.5rem;
+      border: 1px solid $dark-color;
+      color: $dark-color;
+      font-size: 1rem;
+      font-weight: 500;
+      background-color: transparent;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $light-color;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #ebebeb;
+
+    &::before,
+    &::after {
+      content: "" !important;
+    }
+  }
+
+  .swiper-navigation-wrapper {
+  }
+
+  .swiper-button-next {
+    background-image: url("/assets/media/icons/right-arrow.svg");
+  }
+
+  .swiper-button-prev {
+    background-image: url("/assets/media/icons/left-arrow.svg");
+  }
+}
