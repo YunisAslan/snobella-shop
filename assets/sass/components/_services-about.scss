@@ -1,0 +1,32 @@
+.services-about-box {
+  width: 1267px;
+  height: 260px;
+  border: 1px solid #e4e4e4;
+  margin-bottom: 80px;
+  .ser {
+    margin-left: 80px;
+    margin-top: 40px;
+    img {
+      margin-left: 80px;
+      margin-bottom: 10px;
+    }
+    span {
+      margin-bottom: 10px;
+      width: 1530px;
+      height: 2884px;
+    }
+  }
+}
+.col-3 {
+  position: relative;
+}
+
+.line {
+  width: 1px;
+  height: 100%;
+  background-color: #e4e4e4;
+  position: absolute;
+  top: 0;
+  left: 95%;
+  transform: translateX(-50%);
+}
