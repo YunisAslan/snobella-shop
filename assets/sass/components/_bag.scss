@@ -10,19 +10,20 @@
     overflow: hidden;
 
     .box-img {
-      // justify-content: flex-end;
-      // display: flex;
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      bottom: -45px;
+      right: -30px;
 
       img {
-        width: 10rem;
-        position: absolute;
-        object-fit: cover;
-        top: 1rem;
-        right: -42px;
+        width: 100%;
+        height: 100%;
       }
     }
 
     h3 {
+      text-transform: capitalize;
       color: #000;
       margin-top: 24px;
       margin-left: 24px;
