@@ -12135,12 +12135,17 @@ textarea.form-control-lg {
 }
 .product-card .product-feat {
   border-radius: 0.5rem;
-  background: #43d167;
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   padding: 0.2rem 1rem;
+}
+.product-card .product-feat.new {
+  background: #43d167;
+}
+.product-card .product-feat.sale {
+  background: #df4244;
 }
 .product-card .heart-btn i {
   font-size: 1.375rem;
@@ -12320,6 +12325,9 @@ textarea.form-control-lg {
 .featured-products .products-swiper {
   padding: 0 1.75rem;
 }
+.featured-products .img-wrapper {
+  height: 17.1875rem;
+}
 .featured-products .swiper-button-next,
 .featured-products .swiper-button-prev {
   background-position: center;
@@ -12375,14 +12383,19 @@ textarea.form-control-lg {
   position: relative;
   overflow: hidden;
 }
-.bag-section .box .box-img img {
-  width: 10rem;
+.bag-section .box .box-img {
   position: absolute;
-  object-fit: cover;
-  top: 1rem;
-  right: -42px;
+  width: 180px;
+  height: 180px;
+  bottom: -45px;
+  right: -30px;
+}
+.bag-section .box .box-img img {
+  width: 100%;
+  height: 100%;
 }
 .bag-section .box h3 {
+  text-transform: capitalize;
   color: #000;
   margin-top: 24px;
   margin-left: 24px;
