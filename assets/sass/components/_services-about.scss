@@ -1,13 +1,15 @@
 .services-about-box {
-  width: 1267px;
-  height: 260px;
+  // background-color: red;
+  // height: 260px;
   border: 1px solid #e4e4e4;
   margin-bottom: 80px;
+
   .ser {
-    margin-left: 80px;
-    margin-top: 40px;
+    // margin-left: 80px;
+    // margin-top: 40px;
+
     img {
-      margin-left: 80px;
+      // margin-left: 80px;
       margin-bottom: 10px;
     }
     span {
@@ -17,16 +19,20 @@
     }
   }
 }
-.col-3 {
-  position: relative;
-}
+// .col-3 {
+//   position: relative;
+// }
 
 .line {
   width: 1px;
-  height: 100%;
+  height: 200px;
   background-color: #e4e4e4;
   position: absolute;
-  top: 0;
-  left: 95%;
-  transform: translateX(-50%);
+  top: calc(50% - 100px);
+  left: 100%;
+  display: none;
+
+  @include lg {
+    display: block;
+  }
 }

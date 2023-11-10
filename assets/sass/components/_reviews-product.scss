@@ -22,12 +22,14 @@
 }
 
 .red-line {
-  padding: 5px 60px;
+  padding: 3px 50px;
+  opacity: 100;
   border: none;
   position: absolute;
-  top: -20px;
-  color: red;
-  background-color: red;
+  top: -18px;
+  color: #df4244;
+  background-color: #df4244;
+  border-radius: 6px;
 }
 .product-description-text {
   margin-top: 30px;

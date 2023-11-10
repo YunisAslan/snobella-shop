@@ -112,17 +112,29 @@
     <main>
         <!-- ========== Start Shoulder Bags ========== -->
 
-        <section class="shoulder-Bags">
+        <div class="container">
+            <!-- ========== Start Breadcrumb ========== -->
+            <div class="breadcrumb">
+                <a href="./index.html">
+                    Home
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.66699 4L10.667 8L6.66699 12" stroke="#2B2B2B" stroke-width="2"
+                        stroke-linecap="square" />
+                </svg>
+                <a href="#">Single Product</a>
+            </div>
+            <!-- ========== End Breadcrumb ========== -->
+        </div>
+
+        <section class="shoulder-bags">
             <div class="container">
-                <div class="products-info-top shoulder">
-                    <a style="color: black;" href="#">Home <img src="./assets/media/icons/right-arrow.svg" alt=""></a>
-                    <span style="color: rgba(29, 29, 29, 0.75);">Shoulder Bags</span>
-                </div>
                 <div class="row">
-                    <div class="col-5">
+
+                    <div class="col-12 col-lg-5">
                         <div class="product-card">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div style="background: red;" class="product-feat">
+                                <div class="product-feat">
                                     <span>30%</span>
                                 </div>
                                 <button class="border-0 bg-transparent heart-btn">
@@ -130,13 +142,14 @@
                                 </button>
                             </div>
 
-                            <div style="height: 26rem; width: 20rem;" class="img-wrapper">
+                            <div class="img-wrapper">
                                 <img src="./assets/media/images/featured-product-1.svg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-7 d-flex justify-content-end">
-                        <div class="d-flex flex-column">
+
+                    <div class="col-12 col-lg-7">
+                        <div class="d-flex flex-column mt-4 mt-lg-0 ms-lg-4">
                             <h3>Hotel Magique Love and Magique Tote Bag</h3>
                             <ul class="stars d-flex pb-2 column-gap-2">
                                 <li><img src="./assets/media/icons/star.svg" alt=""></li>
@@ -148,65 +161,67 @@
                                 <li>|</li>
                                 <li>2 reviews</li>
                             </ul>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex column-gap-4">
                                 <div class="pieces">
-                                    <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between">
                                         <span>2-9 pieces</span>
-                                        <h5>US $20.00</h5>
+                                        <h5 class="m-0">US $20.00</h5>
                                     </div>
                                 </div>
                                 <div class="pieces">
-                                    <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between">
                                         <span>10-49 pieces</span>
-                                        <h5>US $15.00</h5>
+                                        <h5 class="m-0">US $15.00</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between">
-                                <div style="border: 1px solid red !important;" class="pieces">
-                                    <div class="d-flex justify-content-between">
+                            <div class="d-flex column-gap-4">
+                                <div style="border: 1px solid #F75145;" class="pieces">
+                                    <div class="d-flex align-items-center justify-content-between">
                                         <span>50 pieces</span>
-                                        <h5 style="color: red;">US $12.00</h5>
+                                        <h5 style="color: #F75145;" class="m-0">US $12.00</h5>
                                     </div>
                                 </div>
                                 <div class="pieces">
-                                    <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between">
                                         <span>2-9 pieces</span>
-                                        <h5>US $20.00</h5>
+                                        <h5 class="m-0">US $20.00</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex  size-color ">
-                                <h5>size</h5>
-                                <h5 style="margin-left: 22rem;">color</h5>
-                            </div>
-                            <div class="d-flex  justify-content-between ">
-                                <div class="left d-flex  justify-content-between">
-                                    <div class="size"><span>XS</span></div>
-                                    <div class="size"><Span>S</Span></div>
-                                    <div class="size"><span>M</span></div>
-                                </div>
-                                <div class="right d-flex  ">
-                                    <div style="background: #cd5c0b;" class="color"></div>
-                                    <div style="background: #0085FF;" class="color"></div>
-                                    <div style="background: #35783B;" class="color"></div>
-                                    <div style="background: #ED0875;" class="color"></div>
+                            <div class="d-flex size-color">
+                                <div>
+                                    <h5 class="mb-4">Size</h5>
+
+                                    <div class="left d-flex flex-wrap gap-2">
+                                        <div class="size"><span>XS</span></div>
+                                        <div class="size"><Span>S</Span></div>
+                                        <div class="size"><span>M</span></div>
+                                    </div>
                                 </div>
 
+                                <div class="right-wrapper">
+                                    <h5 class="mb-4">Color</h5>
+
+                                    <div class="right d-flex">
+                                        <div style="background: #cd5c0b;" class="color"></div>
+                                        <div style="background: #0085FF;" class="color"></div>
+                                        <div style="background: #35783B;" class="color"></div>
+                                        <div style="background: #ED0875;" class="color"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between adds ">
+                            <div class="d-flex column-gap-4 adds">
                                 <div>
-                                    <button style="background:  #DF4244; color: white; border: none;"
-                                        class="add-to-card-btn">Add to card</button>
+                                    <button class="add-to-card-btn">Add to card</button>
                                 </div>
                                 <div>
-                                    <button style="background: white;" class="add-to-card-btn">Cash payment</button>
+                                    <button class="cash-payment-btn">Cash payment</button>
                                 </div>
                             </div>
                             <div>
                                 <a style="color: black; text-decoration: underline !important;" href="#">WhatsApp
                                     Order</a>
-
                             </div>
 
 
@@ -229,17 +244,13 @@
                     <h4>
                         Product Description
                     </h4>
-                    <a herf="#">
-                        Reviews (3)
-                    </a>
-
                 </div>
                 <div class="line-container">
                     <hr class="black-line">
                     <hr class="red-line">
                 </div>
                 <div class="product-description-text">
-                    <div style="width: 1100px;">
+                    <div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore
@@ -452,8 +463,8 @@
         <section class="services-about">
             <div class="container">
                 <div class="services-about-box">
-                    <div class="row justify-content-center align-items-center g-2 ser">
-                        <div class="col-3">
+                    <div class="row justify-content-center align-items-center ser">
+                        <div class="col-12 col-md-6 col-lg-3 text-center position-relative" style="padding: 2rem 3rem;">
                             <img src="./assets/media/icons/bus.svg">
                             <h5>Guaranteed delivery</h5>
                             <span>Consectetur adipiscing
@@ -461,21 +472,24 @@
                                 incididunt ut labore</span>
                             <div class="line"></div>
                         </div>
-                        <div class="col-3"><img src="./assets/media/icons/arrowright.svg">
+                        <div class="col-12 col-md-6 col-lg-3 text-center position-relative" style="padding: 2rem 3rem;">
+                            <img src="./assets/media/icons/arrowright.svg">
                             <h5>Do not come back</h5>
                             <span>Consectetur adipiscing
                                 sed do eiusmod tempor
                                 incididunt ut labore</span>
                             <div class="line"></div>
                         </div>
-                        <div class="col-3"><img src="./assets/media/icons/lock.svg">
+                        <div class="col-12 col-md-6 col-lg-3 text-center position-relative" style="padding: 2rem 3rem;">
+                            <img src="./assets/media/icons/lock.svg">
                             <h5>Safe and secure shopping</h5>
                             <span>Consectetur adipiscing
                                 sed do eiusmod tempor
                                 incididunt ut labore</span>
                             <div class="line"></div>
                         </div>
-                        <div class="col-3"><img src="./assets/media/icons/card.svg">
+                        <div class="col-12 col-md-6 col-lg-3 text-center position-relative" style="padding: 2rem 3rem;">
+                            <img src="./assets/media/icons/card.svg">
                             <h5>Payment at the door or </h5>
                             <span>Consectetur adipiscing
                                 sed do eiusmod tempor
@@ -612,6 +626,8 @@
 
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- config js -->
+    <script src="./assets/js/config.js"></script>
     <!-- og js -->
     <script type="module" src="./assets/js/index.js"></script>
 </body>
