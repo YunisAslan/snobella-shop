@@ -13,9 +13,6 @@ closeBtn.addEventListener("click", () => mobileMenu.classList.remove("active"));
 const navbar = document.querySelector(".navbar");
 const sticky = navbar.offsetTop;
 
-console.log(sticky);
-console.log(window.scrollY);
-
 function stickyNavbar() {
   if (window.scrollY >= sticky) {
     navbar.classList.add("sticky");

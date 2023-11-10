@@ -13206,6 +13206,7 @@ textarea.form-control-lg {
 
 .product-list-section {
   padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 .product-list-section h1 {
   color: #212121;
@@ -13402,9 +13403,34 @@ textarea.form-control-lg {
   height: auto;
 }
 .product-list-section .product-list-inner__row .panel-list li a {
+  display: block;
+  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
   color: rgba(33, 33, 33, 0.9);
   font-size: 1rem;
   font-weight: 400;
+  transition: all 300ms ease;
+}
+.product-list-section .product-list-inner__row .panel-list li a:hover {
+  background-color: #eef0ef;
+}
+.product-list-section .product-list-inner__row .size-group.panel-list li {
+  overflow: hidden;
+}
+.product-list-section .product-list-inner__row .size-group.panel-list li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: rgba(33, 33, 33, 0.9);
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 300ms ease;
+}
+.product-list-section .product-list-inner__row .size-group.panel-list li a:hover {
+  background-color: #eef0ef;
 }
 .product-list-section .product-list-inner__row .product-card {
   margin-bottom: 2rem;
