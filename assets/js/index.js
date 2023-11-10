@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   getFilteredProducts();
 });
 
+// filters
 async function getCategorizedProducts() {
   const products = await getAllProducts();
   let differentCategories = [];

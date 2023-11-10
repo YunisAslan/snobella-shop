@@ -17,7 +17,7 @@
 
 <body>
     <!-- ========== Start Header ========== -->
-    <header class="nav">
+    <header class="header">
         <div class="container">
             <div class="hdr d-flex justify-content-between">
                 <div class="phone">
@@ -26,7 +26,7 @@
                             <img src="./assets/media/icons/phone.svg" alt="Phone Icon">
                         </li>
                         <li>
-                            <a href=“tel:748-383-23-14”>+748 383 23 14</a>
+                            <a href="tel:748-383-23-14">+748 383 23 14</a>
                         </li>
                     </ul>
                 </div>
@@ -47,67 +47,108 @@
 
     <nav class="navbar">
         <div class="container">
-            <div class="row mb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 text">
+                        <h1>
+                            <a href="./index.html">Snobella</a>
+                        </h1>
+                    </div>
+                    <div class="col-5">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Search all products"
+                                id="example-search-input">
+                            <img src="./assets/media/icons/search.svg" alt="Search Icon">
+                        </div>
+                    </div>
+                    <div class="col-4 nav-icon p-0">
 
-                <div class="col-3 text">
-                    <h1>
-                        <a href="./index.html">Snobella</a>
-                    </h1>
-                </div>
-                <div class="col-5">
-                    <div class="input-group">
-                        <input class="form-control" type="search" placeholder="Search all products"
-                            id="example-search-input">
-                        <img src="./assets/media/icons/search.svg" alt="Search Icon">
+                        <ul class="d-flex nav-menu align-items-center">
+                            <li>
+                                <button class="menu-btn">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">
+                                    <img src="./assets/media/icons/user.svg" alt="User Icon">
+                                    <span>Sign up</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">
+                                    <img src="./assets/media/icons/heart.svg" alt="Heart Icon">
+                                    <span>Wishlist</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">
+                                    <img src="./assets/media/icons/bag.svg" alt="Bag Icon">
+                                    <span>Basket</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-4 nav-icon p-0">
-                    <ul class="d-flex justify-content-center column-gap-2">
-                        <li>
-                            <a href="#">
-                                <img src="./assets/media/icons/user.svg" alt="User Icon">
-                                <span>Sign up</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./assets/media/icons/heart.svg" alt="Heart Icon">
-                                <span>Wishlist</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./assets/media/icons/bag.svg" alt="Bag Icon">
-                                <span>Basket</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="link d-flex justify-content-between my-2">
-                <div class="links">
-                    <ul class="d-flex justify-content-center">
-                        <li><a href="#">Evening bags</a></li>
-                        <li><a href="#">Shoulder bag</a></li>
-                        <li><a href="#">Backpack</a></li>
-                        <li><a href="#">Handbag</a></li>
-                        <li><a href="#">Postman bag</a></li>
-                        <li><a href="#">Belt bags</a></li>
-                    </ul>
-
-                </div>
-
             </div>
 
+            <div class="container mt-4 mb-3 d-none d-lg-flex">
+                <div class="link">
+                    <div class="links">
+                        <ul class="d-flex justify-content-center">
+                            <li><a href="./products.html">Evening bags</a></li>
+                            <li><a href="./products.html">Shoulder bag</a></li>
+                            <li><a href="./products.html">Backpack</a></li>
+                            <li><a href="./products.html">Handbag</a></li>
+                            <li><a href="./products.html">Postman bag</a></li>
+                            <li><a href="./products.html">Belt bags</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </nav>
-    <div>
-        <hr>
-    </div>
-    <!-- ========== End Header ========== -->
 
+    <!-- ========== Start Mobile menu ========== -->
+    <div class="mobile-menu">
+
+        <div class="mobile-menu__inner position-relative">
+            <button class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h1>
+                <a href="./index.html">Snobella</a>
+            </h1>
+
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search all products">
+                <img src="./assets/media/icons/search.svg" alt="Search Icon">
+            </div>
+
+            <ul class="d-flex flex-column justify-content-center row-gap-2">
+                <li><a href="./products.html">Evening bags</a></li>
+                <li><a href="./products.html">Shoulder bag</a></li>
+                <li><a href="./products.html">Backpack</a></li>
+                <li><a href="./products.html">Handbag</a></li>
+                <li><a href="./products.html">Postman bag</a></li>
+                <li><a href="./products.html">Belt bags</a></li>
+            </ul>
+
+            <hr class="my-1 w-50" style="color: rgba(227, 228, 230, 0.9);">
+
+            <div class="phone">
+                <ul class="d-flex flex-column row-gap-2">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Customer service</a></li>
+                    <li><a href="tel:748-383-23-14">+748 383 23 14</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ========== End Mobile menu ========== -->
+    <!-- ========== End Header ========== -->
 
     <main>
         <!-- ========== Start Shoulder Bags ========== -->
