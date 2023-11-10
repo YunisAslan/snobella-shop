@@ -177,12 +177,13 @@
                     <div class="d-flex justify-content-center justify-content-lg-end py-4 my-lg-0">
                         <div
                             class="product-list-inner__top d-flex align-items-center justify-content-center justify-content-lg-end">
-                            <p class="products-quantity text-nowrap m-0 me-4">320 result</p>
-                            <select class="form-select products-select" aria-label="Products select">
-                                <option disabled>Open this select menu</option>
-                                <option value="1" selected>Featured</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <p class="products-result-quantity text-nowrap m-0 me-4"></p>
+                            <select class="form-select products-type-select" aria-label="Products select">
+                                <option selected disabled>Select by product type</option>
+                                <option value="all">All</option>
+                                <option value="featured">Featured</option>
+                                <option value="bestseller">Bestseller</option>
+                                <option value="discounted">Discounted</option>
                             </select>
                         </div>
                     </div>
@@ -197,13 +198,15 @@
                                     <img src="./assets/media/icons/left-arrow.svg" alt="" class="panel-icon">
                                 </h3>
 
-                                <ul class="panel-list d-flex flex-column row-gap-3 active">
-                                    <li><a href="#">Backpacks</a></li>
-                                    <li><a href="#">Belt Bags</a></li>
-                                    <li><a href="#">Handbags</a></li>
-                                    <li><a href="#">Shoulder bags</a></li>
-                                    <li><a href="#">Evening bags</a></li>
-                                    <li><a href="#">Postman bag</a></li>
+                                <ul class="panel-list d-flex flex-column row-gap-1 active">
+                                    <li><a href="#" data-category="backpacks">Backpacks</a></li>
+                                    <li><a href="#" data-category="beltbags">Belt Bags</a></li>
+                                    <li><a href="#" data-category="handbags">Handbags</a></li>
+                                    <li><a href="#" data-category="shoulderbags">Shoulder bags</a></li>
+                                    <li><a href="#" data-category="eveningbags">Evening bags</a></li>
+                                    <li><a href="#" data-category="postmanbags">Postman bag</a></li>
+                                    <li><a href="#" data-category="example" class="fst-italic">Example for not-found</a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -213,15 +216,15 @@
                                     <img src="./assets/media/icons/left-arrow.svg" alt="" class="panel-icon">
                                 </h3>
 
-                                <div class="slide-group panel-list active">
-                                    <input type="number" placeholder="$10">
+                                <form class="slide-group panel-list active" id="price-filter-form">
+                                    <input type="number" placeholder="$10" id="min-price">
                                     <span>-</span>
-                                    <input type="number" placeholder="$50">
+                                    <input type="number" placeholder="$50" id="max-price">
 
-                                    <button class="search-by-price-btn">
+                                    <button type="submit" class="search-by-price-btn">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
-                                </div>
+                                </form>
                             </div>
 
                             <div class="size-panel">
@@ -231,9 +234,9 @@
                                 </h3>
 
                                 <ul class="size-group panel-list active">
-                                    <li>XS</li>
-                                    <li>S</li>
-                                    <li>M</li>
+                                    <li><a href="#" data-size="XS">XS</a></li>
+                                    <li><a href="#" data-size="S">S</a></li>
+                                    <li><a href="#" data-size="M">M</a></li>
                                 </ul>
                             </div>
 
@@ -285,170 +288,27 @@
                         </div>
 
                         <div class="col-lg-8 mt-4 mt-lg-0">
-                            <div class="row">
-                                <div class="col-12 col-md-6 col-xl-6">
-                                    <div class="product-card">
-                                        <div class="d-flex justify-content-between align-items-center">
 
-                                            <div class="product-feat">
-                                                <span>New</span>
-                                            </div>
-
-                                            <button class="border-0 bg-transparent heart-btn">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </button>
-                                        </div>
-
-                                        <div class="img-wrapper">
-                                            <img src="./assets/media/images/featured-product-1.svg" alt="">
-                                        </div>
-
-                                        <div class="product-info">
-                                            <ul class="stars d-flex pb-2 column-gap-2">
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                            </ul>
-                                            <p>Shoulder Bag Leather Bag Leather
-                                                undertakes laborious physical physical</p>
-
-                                            <div class="price-discount">
-                                                <p>$130.00<span>From $340.00</span></p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <button class="add-to-card-btn">Add to card</button>
-                                        </div>
-                                    </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border text-warning d-none" role="status">
+                                    <span class="visually-hidden">Loading...</span>
                                 </div>
+                            </div>
 
-                                <div class="col-12 col-md-6 col-xl-6">
-                                    <div class="product-card">
-                                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 id="not-found-msg" class="d-none text-center bg-warning p-3 rounded w-75 m-auto my-4">No
+                                product matching
+                                your
+                                request was found. Try again or wait for new products
+                            </h6>
 
-                                            <div class="product-feat">
-                                                <span>New</span>
-                                            </div>
-
-                                            <button class="border-0 bg-transparent heart-btn">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </button>
-                                        </div>
-
-                                        <div class="img-wrapper">
-                                            <img src="./assets/media/images/featured-product-1.svg" alt="">
-                                        </div>
-
-                                        <div class="product-info">
-                                            <ul class="stars d-flex pb-2 column-gap-2">
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                            </ul>
-                                            <p>Shoulder Bag Leather Bag Leather
-                                                undertakes laborious physical physical</p>
-
-                                            <div class="price-discount">
-                                                <p>$130.00<span>From $340.00</span></p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <button class="add-to-card-btn">Add to card</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-6 col-xl-6">
-                                    <div class="product-card">
-                                        <div class="d-flex justify-content-between align-items-center">
-
-                                            <div class="product-feat">
-                                                <span>New</span>
-                                            </div>
-
-                                            <button class="border-0 bg-transparent heart-btn">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </button>
-                                        </div>
-
-                                        <div class="img-wrapper">
-                                            <img src="./assets/media/images/featured-product-1.svg" alt="">
-                                        </div>
-
-                                        <div class="product-info">
-                                            <ul class="stars d-flex pb-2 column-gap-2">
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                            </ul>
-                                            <p>Shoulder Bag Leather Bag Leather
-                                                undertakes laborious physical physical</p>
-
-                                            <div class="price-discount">
-                                                <p>$130.00<span>From $340.00</span></p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <button class="add-to-card-btn">Add to card</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-6 col-xl-6">
-                                    <div class="product-card">
-                                        <div class="d-flex justify-content-between align-items-center">
-
-                                            <div class="product-feat">
-                                                <span>New</span>
-                                            </div>
-
-                                            <button class="border-0 bg-transparent heart-btn">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </button>
-                                        </div>
-
-                                        <div class="img-wrapper">
-                                            <img src="./assets/media/images/featured-product-1.svg" alt="">
-                                        </div>
-
-                                        <div class="product-info">
-                                            <ul class="stars d-flex pb-2 column-gap-2">
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                                <li><img src="./assets/media/icons/star.svg" alt=""></li>
-                                            </ul>
-                                            <p>Shoulder Bag Leather Bag Leather
-                                                undertakes laborious physical physical</p>
-
-                                            <div class="price-discount">
-                                                <p>$130.00<span>From $340.00</span></p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <button class="add-to-card-btn">Add to card</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="row product-list-row">
+                                <!-- will come from js -->
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-
-
 
         </section>
 
@@ -569,10 +429,16 @@
 
     </footer>
 
+    <!-- axios js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+        integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- sweet alert js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- header js -->
     <script src="./assets/js/header.js"></script>
     <!-- og js -->
-    <script src="./assets/js/product-list.js"></script>
+    <script type="module" src="./assets/js/product-list.js"></script>
 </body>
 
 </html>

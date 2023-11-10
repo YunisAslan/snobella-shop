@@ -15,6 +15,7 @@ $radio-colors: (
 
 .product-list-section {
   padding-top: 1rem;
+  padding-bottom: 3rem;
 
   h1 {
     color: $dark-color;
@@ -209,10 +210,44 @@ $radio-colors: (
           height: auto;
         }
 
-        li a {
-          color: rgba(33, 33, 33, 0.9);
-          font-size: 1rem;
-          font-weight: 400;
+        li {
+          // background-color: teal;
+          a {
+            display: block;
+            // background-color: yellow;
+            border-radius: 4px;
+            padding: 0.5rem 0.8rem;
+            color: rgba(33, 33, 33, 0.9);
+            font-size: 1rem;
+            font-weight: 400;
+            transition: all 300ms ease;
+
+            &:hover {
+              background-color: $slight-color;
+            }
+          }
+        }
+      }
+
+      .size-group.panel-list {
+        li {
+          overflow: hidden;
+          a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            color: rgba(33, 33, 33, 0.9);
+            font-size: 1rem;
+            font-weight: 400;
+            transition: all 300ms ease;
+
+            &:hover {
+              background-color: $slight-color;
+            }
+          }
         }
       }
 
