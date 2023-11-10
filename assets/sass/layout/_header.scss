@@ -2,7 +2,7 @@
   width: 100%;
   background: #007878;
   padding: 0;
-
+ 
   .container {
     display: flex;
     justify-content: space-between;
@@ -29,7 +29,8 @@
             color: rgba(255, 255, 255, 0.9);
             font-family: $font-family;
             font-size: $font-size-regular;
-            font-weight: $font-weight-medium;
+            font-weight: $font-weight-medium;        
+
           }
         }
       }
@@ -42,12 +43,17 @@
 
           li {
             color: rgba(255, 255, 255, 0.75);
+           @media (max-width: 640px) {
+            display: none;
+            
+           }
+          }
             a {
               color: rgba(255, 255, 255, 0.75);
               font-family: $font-family;
               font-size: $font-size-regular;
               font-weight: $font-weight-medium;
-            }
+            
           }
         }
       }
@@ -164,5 +170,84 @@
         }
       }
     }
+  }
+}
+.menu {
+  display: block;
+  cursor: pointer;
+
+  .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: #fff;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .col-5 {
+      display: none;
+  }
+
+  .nav-icon {
+      display: flex;
+      align-items: center;
+  }
+
+  .links ul {
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+          margin-right: 1rem;
+
+          a {
+              color: #273142;
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: bold;
+              line-height: 170%;
+          }
+      }
+  }
+
+  .menu.active {
+      .bar:nth-child(2) {
+          opacity: 0;
+      }
+
+      .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+      }
+
+      .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+      }
+  }
+
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+      &.active {
+          left: 0;
+      }
+
+      .nav-item {
+          margin: 2.5rem 0;
+      }
   }
 }
