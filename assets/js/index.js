@@ -87,7 +87,8 @@ function generateIntuitiveProduct(place, product) {
 
   place.innerHTML += `
    <div class="swiper-slide">
-    <div class="product-card">
+    <a href="product-page.html?id=${product.id}">
+      <div class="product-card">
         <div class="d-flex justify-content-between align-items-center">
             <div class="product-feat ${
               product.isDiscounted ? "sale" : product.isNew ? "new" : ""
@@ -130,13 +131,14 @@ function generateIntuitiveProduct(place, product) {
               } <span>${
     product.isDiscounted ? `From $${product.price}` : ""
   }</span></p>
-            </div>
-        </div>
+              </div>
+          </div>
 
         <div>
             <button class="add-to-card-btn">Add to card</button>
         </div>
-    </div>
+      </div>
+    </a>
   </div>
   `;
 }

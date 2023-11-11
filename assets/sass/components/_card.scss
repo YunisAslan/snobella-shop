@@ -3,6 +3,15 @@
   background: #f9f9f9;
   padding: 1rem;
   height: 31.75rem;
+  transition: all 400ms ease;
+
+  h5 {
+    color: $dark-color;
+  }
+
+  &:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
 
   .product-feat {
     border-radius: 0.5rem;

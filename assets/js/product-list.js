@@ -193,7 +193,8 @@ function generateIntuitiveProduct(product) {
 
   productListRow.innerHTML += `
    <div class="col-12 col-md-6 col-xl-6">
-    <div class="product-card">
+    <a href="product-page.html?id=${product.id}">
+      <div class="product-card">
         <div class="d-flex justify-content-between align-items-center">
             <div class="product-feat ${
               product.isDiscounted ? "sale" : product.isNew ? "new" : ""
@@ -242,7 +243,8 @@ function generateIntuitiveProduct(product) {
         <div>
             <button class="add-to-card-btn">Add to card</button>
         </div>
-    </div>
+      </div>
+    </a>
   </div>
   `;
 }
