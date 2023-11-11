@@ -6,3 +6,10 @@ export async function getAllProducts() {
 
   return data;
 }
+
+// GET by ID
+export async function getProductById(id) {
+  const { data } = await axios.get(`${API_BASE_URL}/products/${id}`);
+
+  return data;
+}
