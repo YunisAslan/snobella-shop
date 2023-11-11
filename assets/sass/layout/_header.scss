@@ -134,6 +134,8 @@
       }
 
       .nav-icon {
+        // width: 100%;
+        // background-color: yellow;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -143,6 +145,7 @@
           justify-content: center;
 
           li {
+            position: relative;
             margin-left: 10px;
 
             img {
@@ -159,7 +162,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              padding: 0.3rem 0.5rem;
+              padding: 0.5rem;
               border-radius: 4px;
               color: #2e2e2e;
               font-family: $font-family;
@@ -209,6 +212,27 @@
           }
         }
       }
+    }
+  }
+
+  .basket-count {
+    right: -9px;
+    top: -9px;
+    position: absolute;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    background-color: #007878;
+    color: $light-color;
+
+    @include xl {
+      width: 24px;
+      height: 24px;
     }
   }
 }

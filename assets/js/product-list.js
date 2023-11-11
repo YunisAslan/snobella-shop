@@ -1,5 +1,6 @@
 import { getAllProducts } from "./requests.js";
 
+const basketCount = document.querySelector(".basket-count");
 const notFoundMsg = document.querySelector("#not-found-msg");
 const panelTriggers = document.querySelectorAll(".product-list-inner__row h3");
 const productListRow = document.querySelector(".product-list-row");
@@ -39,6 +40,7 @@ async function getInitialProducts() {
       generateIntuitiveProduct(product);
     });
 
+    addToCart(defaultProductsArr);
     updateResultQuantity(allProducts.length);
   } catch (err) {
     console.error(err);
@@ -55,6 +57,7 @@ productsTypeSelect.addEventListener("change", function (e) {
     productListRow.innerHTML = "";
     getInitialProducts();
 
+    addToCart(defaultProductsArr);
     updateResultQuantity(defaultProductsArr.length);
   }
 
@@ -68,6 +71,7 @@ productsTypeSelect.addEventListener("change", function (e) {
       generateIntuitiveProduct(product);
     });
 
+    addToCart(defaultProductsArr);
     updateResultQuantity(isFeaturedProducts.length);
   }
 
@@ -81,6 +85,7 @@ productsTypeSelect.addEventListener("change", function (e) {
       generateIntuitiveProduct(product);
     });
 
+    addToCart(defaultProductsArr);
     updateResultQuantity(isBestSellerProducts.length);
   }
 
@@ -94,6 +99,7 @@ productsTypeSelect.addEventListener("change", function (e) {
       generateIntuitiveProduct(product);
     });
 
+    addToCart(defaultProductsArr);
     updateResultQuantity(isDiscountedProducts.length);
   }
 });
@@ -117,6 +123,7 @@ function filterProductsByCategory(category) {
     generateIntuitiveProduct(product);
   });
 
+  addToCart(defaultProductsArr);
   updateResultQuantity(categorizedProducts.length);
 }
 
@@ -150,6 +157,7 @@ function filterProductsByPrice(minPrice, maxPrice) {
     generateIntuitiveProduct(product);
   });
 
+  addToCart(defaultProductsArr);
   updateResultQuantity(filteredProducts.length);
 }
 
@@ -172,6 +180,7 @@ function filterProductsBySize(size) {
     generateIntuitiveProduct(product);
   });
 
+  addToCart(defaultProductsArr);
   updateResultQuantity(categorizedProducts.length);
 }
 
@@ -241,10 +250,52 @@ function generateIntuitiveProduct(product) {
         </div>
 
         <div>
-            <button class="add-to-card-btn">Add to card</button>
+            <button class="add-to-cart-btn" id="${
+              product.id
+            }">Add to card</button>
         </div>
       </div>
     </a>
   </div>
   `;
+}
+
+function addToCart(products) {
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+
+  console.log(addToCartBtns);
+
+  addToCartBtns.forEach((addToCartBtn) => {
+    addToCartBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const id = this.id;
+      const findedProduct = products.find((findEl) => findEl.id == id);
+
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const findedProductIndex = cart.findIndex(
+        (findEl) => findEl.id == findedProduct.id
+      );
+
+      if (findedProductIndex !== -1) {
+        cart[findedProductIndex].quantity++;
+      } else {
+        cart.push({ id: findedProduct.id, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // update basket count
+      basketCount.innerText = cart.length;
+
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Add to basket successfully",
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    });
+  });
 }

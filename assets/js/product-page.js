@@ -1,5 +1,6 @@
 import { getAllProducts, getProductById } from "./requests.js";
 
+const basketCount = document.querySelector(".basket-count");
 const singleProductRow = document.querySelector(".single-product-row");
 const loadingSpinner = document.querySelector(".spinner-border");
 const youMayAlsoLikeWrapper = document.querySelector(
@@ -8,7 +9,9 @@ const youMayAlsoLikeWrapper = document.querySelector(
 
 const id = new URLSearchParams(location.search).get("id");
 
-document.addEventListener("DOMContentLoaded", getOneProduct);
+document.addEventListener("DOMContentLoaded", () => {
+  getOneProduct();
+});
 
 async function getOneProduct() {
   try {
@@ -128,7 +131,9 @@ async function getOneProduct() {
             </div>
             <div class="d-flex column-gap-4 adds">
                 <div>
-                    <button class="add-to-card-btn">Add to card</button>
+                    <button class="add-to-cart-btn" id=${
+                      product.id
+                    }>Add to card</button>
                 </div>
                 <div>
                     <button class="cash-payment-btn">Cash payment</button>
@@ -144,7 +149,6 @@ async function getOneProduct() {
     </div>
 
   `;
-
     applySizeStyles(size);
   } catch (err) {
     console.error(err);
@@ -169,6 +173,7 @@ async function getYouMayAlsoProducts(category) {
     <a href="product-page.html?id=${product.id}">
       <div class="product-card">
         <div class="d-flex justify-content-between align-items-center">
+        
             <div class="product-feat ${
               product.isDiscounted ? "sale" : product.isNew ? "new" : ""
             }">
@@ -214,11 +219,57 @@ async function getYouMayAlsoProducts(category) {
           </div>
 
         <div>
-            <button class="add-to-card-btn">Add to card</button>
+            <button class="add-to-cart-btn" id=${
+              product.id
+            }>Add to card</button>
         </div>
       </div>
     </a>
   </div>
   `;
+  });
+
+  addToCart();
+}
+
+async function addToCart() {
+  const products = await getAllProducts();
+
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+
+  console.log(addToCartBtns);
+
+  addToCartBtns.forEach((addToCartBtn) => {
+    addToCartBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const id = this.id;
+      const findedProduct = products.find((findEl) => findEl.id == id);
+
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const findedProductIndex = cart.findIndex(
+        (findEl) => findEl.id == findedProduct.id
+      );
+
+      if (findedProductIndex !== -1) {
+        cart[findedProductIndex].quantity++;
+      } else {
+        cart.push({ id: findedProduct.id, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // update basket count
+      basketCount.innerText = cart.length;
+
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Add to basket successfully",
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    });
   });
 }

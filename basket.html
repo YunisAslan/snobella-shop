@@ -10,7 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- og css -->
     <link rel="stylesheet" href="./assets/css/main.css">
-    <title>Snobella | Products</title>
+    <title>Snobella | Basket</title>
 </head>
 
 <body>
@@ -152,6 +152,7 @@
 
     <main>
 
+
         <div class="container">
             <!-- ========== Start Breadcrumb ========== -->
             <div class="breadcrumb">
@@ -162,160 +163,68 @@
                     <path d="M6.66699 4L10.667 8L6.66699 12" stroke="#2B2B2B" stroke-width="2"
                         stroke-linecap="square" />
                 </svg>
-                <a href="#">Shoulder Bags</a>
+                <a href="#">Shopping Bag</a>
             </div>
             <!-- ========== End Breadcrumb ========== -->
         </div>
 
-
-        <section class="product-list-section">
+        <section class="basket-items-section">
 
             <div class="container">
-                <h1>Shoulder bags</h1>
+                <h1>Shopping bag</h1>
 
-                <div class="product-list-inner">
 
-                    <div class="d-flex justify-content-center justify-content-lg-end py-4 my-lg-0">
-                        <div
-                            class="product-list-inner__top d-flex align-items-center justify-content-center justify-content-lg-end">
-                            <p class="products-result-quantity text-nowrap m-0 me-4"></p>
-                            <select class="form-select products-type-select" aria-label="Products select">
-                                <option selected disabled>Select by product type</option>
-                                <option value="all">All</option>
-                                <option value="featured">Featured</option>
-                                <option value="bestseller">Bestseller</option>
-                                <option value="discounted">Discounted</option>
-                            </select>
+                <div class="row py-5">
+                    <div class="col-12 col-lg-8 ">
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border text-warning d-none" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
                         </div>
+                        <div class="basket-cards d-flex flex-column row-gap-3">
+                            <!-- will come from JS -->
+                        </div>
+
+                        <h6 id="not-found-msg" class="d-none text-center bg-warning p-3 rounded w-75 m-auto my-4">There
+                            are no
+                            products in your cart</h6>
                     </div>
 
-                    <div class="row product-list-inner__row">
-
-                        <div class="col-lg-4 d-flex flex-column row-gap-4">
-
-                            <div class="categories-panel">
-                                <h3>
-                                    Categories
-                                    <img src="./assets/media/icons/left-arrow.svg" alt="" class="panel-icon">
-                                </h3>
-
-                                <ul class="panel-list d-flex flex-column row-gap-1 active">
-                                    <li><a href="#" data-category="backpacks">Backpacks</a></li>
-                                    <li><a href="#" data-category="beltbags">Belt Bags</a></li>
-                                    <li><a href="#" data-category="handbags">Handbags</a></li>
-                                    <li><a href="#" data-category="shoulderbags">Shoulder bags</a></li>
-                                    <li><a href="#" data-category="eveningbags">Evening bags</a></li>
-                                    <li><a href="#" data-category="postmanbags">Postman bag</a></li>
-                                    <li><a href="#" data-category="example" class="fst-italic">Example for not-found</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="price-panel">
-                                <h3>
-                                    Price
-                                    <img src="./assets/media/icons/left-arrow.svg" alt="" class="panel-icon">
-                                </h3>
-
-                                <form class="slide-group panel-list active" id="price-filter-form">
-                                    <input type="number" placeholder="$10" id="min-price">
-                                    <span>-</span>
-                                    <input type="number" placeholder="$50" id="max-price">
-
-                                    <button type="submit" class="search-by-price-btn">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </form>
-                            </div>
-
-                            <div class="size-panel">
-                                <h3>
-                                    Size
-                                    <img src="./assets/media/icons/left-arrow.svg" alt="" class="panel-icon">
-                                </h3>
-
-                                <ul class="size-group panel-list active">
-                                    <li><a href="#" data-size="XS">XS</a></li>
-                                    <li><a href="#" data-size="S">S</a></li>
-                                    <li><a href="#" data-size="M">M</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="colors-panel">
-                                <h3>
-                                    Color
-                                    <img src="./assets/media/icons/left-arrow.svg" alt="" class="panel-icon">
-                                </h3>
-
-                                <div class="color-group panel-list active">
-                                    <input type="radio" name="color" id="green" value="green" />
-                                    <label for="green"><span class="green"></span></label>
-
-                                    <input type="radio" name="color" id="blue" />
-                                    <label for="blue"><span class="blue"></span></label>
-
-                                    <input type="radio" name="color" id="brown" />
-                                    <label for="brown"><span class="brown"></span></label>
-
-                                    <input type="radio" name="color" id="darkred" />
-                                    <label for="darkred"><span class="darkred"></span></label>
-
-                                    <input type="radio" name="color" id="dark" />
-                                    <label for="dark"><span class="dark"></span></label>
-
-                                    <input type="radio" name="color" id="lightgreen" />
-                                    <label for="lightgreen"><span class="lightgreen"></span></label>
-
-                                    <input type="radio" name="color" id="orange" />
-                                    <label for="orange"><span class="orange"></span></label>
-
-                                    <input type="radio" name="color" id="yellow" />
-                                    <label for="yellow"><span class="yellow"></span></label>
-
-                                    <input type="radio" name="color" id="purple" />
-                                    <label for="purple"><span class="purple"></span></label>
-
-                                    <input type="radio" name="color" id="darkorange" />
-                                    <label for="darkorange"><span class="darkorange"></span></label>
-
-                                    <input type="radio" name="color" id="violet" />
-                                    <label for="violet"><span class="violet"></span></label>
-
-                                    <input type="radio" name="color" id="lightbrown" />
-                                    <label for="lightbrown"><span class="lightbrown"></span></label>
+                    <div class="col-12 col-lg-4">
+                        <div class="invoice-panel">
+                            <div class="panel-main">
+                                <div>
+                                    <p>Your subtotal</p>
+                                    <span class="subtotal-price">US $<span>0</span></span>
+                                </div>
+                                <div>
+                                    <p>Shipping changes</p>
+                                    <span>Free</span>
+                                </div>
+                                <div>
+                                    <p>Total</p>
+                                    <span class="total-price">US $<span>0</span></span>
                                 </div>
                             </div>
 
+                            <div class="panel-promo">
+                                <input type="text" placeholder="Discount prome code">
+                                <button>Apply</button>
+                            </div>
                         </div>
 
-                        <div class="col-lg-8 mt-4 mt-lg-0">
-
-                            <div class="d-flex justify-content-center">
-                                <div class="spinner-border text-warning d-none" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-
-                            <h6 id="not-found-msg" class="d-none text-center bg-warning p-3 rounded w-75 m-auto my-4">No
-                                product matching
-                                your
-                                request was found. Try again or wait for new products
-                            </h6>
-
-                            <div class="row product-list-row">
-                                <!-- will come from js -->
-                            </div>
+                        <div class="confirmations">
+                            <button>Confirm cart</button>
+                            <button>Cash payment</button>
                         </div>
                     </div>
-
                 </div>
+
             </div>
 
         </section>
 
     </main>
-
-
 
 
     <footer class="footer">
@@ -430,6 +339,9 @@
 
     </footer>
 
+
+
+
     <!-- axios js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
         integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
@@ -439,7 +351,7 @@
     <!-- header js -->
     <script src="./assets/js/header.js"></script>
     <!-- og js -->
-    <script type="module" src="./assets/js/product-list.js"></script>
+    <script type="module" src="./assets/js/basket.js"></script>
 </body>
 
 </html>
