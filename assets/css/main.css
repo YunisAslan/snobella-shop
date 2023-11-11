@@ -12187,7 +12187,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
 }
-.product-card .add-to-card-btn {
+.product-card .add-to-cart-btn {
   width: 100%;
   padding: 0.6rem 0;
   border-radius: 0.5rem;
@@ -12638,7 +12638,7 @@ textarea.form-control-lg {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.shoulder-bags .add-to-card-btn {
+.shoulder-bags .add-to-cart-btn {
   border-radius: 0.5rem;
   background: #df4244;
   color: #fff;
@@ -12647,11 +12647,11 @@ textarea.form-control-lg {
   transition: all 300ms ease;
 }
 @media (min-width: 450px) {
-  .shoulder-bags .add-to-card-btn {
+  .shoulder-bags .add-to-cart-btn {
     padding: 0.75rem 3.8rem;
   }
 }
-.shoulder-bags .add-to-card-btn:hover {
+.shoulder-bags .add-to-cart-btn:hover {
   background-color: transparent;
   color: #df4244;
 }
@@ -12670,9 +12670,6 @@ textarea.form-control-lg {
 }
 .shoulder-bags .cash-payment-btn:hover {
   background-color: #eef0ef;
-}
-.shoulder-bags .product-feat {
-  background: #df4244 !important;
 }
 
 .reviews {
@@ -12896,6 +12893,7 @@ textarea.form-control-lg {
   justify-content: center;
 }
 .navbar .container .row .nav-icon ul li {
+  position: relative;
   margin-left: 10px;
 }
 .navbar .container .row .nav-icon ul li img {
@@ -12912,7 +12910,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.3rem 0.5rem;
+  padding: 0.5rem;
   border-radius: 4px;
   color: #2e2e2e;
   font-family: "Poppins", sans-serif;
@@ -12952,6 +12950,27 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
+}
+.navbar .basket-count {
+  right: -9px;
+  top: -9px;
+  position: absolute;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  background-color: #007878;
+  color: #fff;
+}
+@media (min-width: 1200px) {
+  .navbar .basket-count {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .menu-btn {
@@ -13444,4 +13463,206 @@ textarea.form-control-lg {
 }
 .product-list-section .product-list-inner__row .product-card {
   margin-bottom: 2rem;
+}
+
+.basket-items-section .basket-cards {
+  display: flex;
+  flex-direction: column;
+}
+.basket-items-section .basket-cards .basket-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+}
+@media (min-width: 576px) {
+  .basket-items-section .basket-cards .basket-card {
+    flex-direction: row;
+  }
+}
+.basket-items-section .basket-cards .basket-card .img-wrapper {
+  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .basket-items-section .basket-cards .basket-card .img-wrapper {
+    width: 180px;
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+.basket-items-section .basket-cards .basket-card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1.3rem;
+}
+.basket-items-section .basket-cards .basket-card .card-content {
+  flex: 1;
+}
+.basket-items-section .basket-cards .basket-card .card-content .content-title {
+  margin-bottom: 1rem;
+}
+.basket-items-section .basket-cards .basket-card .card-content .content-title h4 {
+  margin: 0;
+  color: #212121;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+}
+.basket-items-section .basket-cards .basket-card .card-content .content-title h4 span {
+  color: rgba(54, 54, 54, 0.75);
+  font-size: 16px;
+  font-weight: 400;
+}
+.basket-items-section .basket-cards .basket-card .card-content .content-title h4:nth-child(2) {
+  color: #f75145;
+  font-size: 20px;
+  font-weight: 600;
+  text-wrap: nowrap;
+  font-size: 18px;
+  padding-left: 4px;
+}
+.basket-items-section .basket-cards .basket-card .card-content p {
+  color: rgba(33, 33, 33, 0.75);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.basket-items-section .basket-cards .basket-card .card-content .quantity-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  column-gap: 0.5rem;
+}
+.basket-items-section .basket-cards .basket-card .card-content .quantity-actions button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #206363;
+}
+.basket-items-section .basket-cards .basket-card .card-content .quantity-actions button i {
+  color: #fff;
+  font-size: 14px;
+}
+.basket-items-section .basket-cards .basket-card .card-content .quantity-actions .items-quantity {
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #e4e4e4;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+}
+.basket-items-section .basket-cards .basket-card .card-btns {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+.basket-items-section .basket-cards .basket-card .card-btns button {
+  border: none;
+  background-color: transparent;
+  color: rgba(33, 33, 33, 0.75);
+  font-size: 14px;
+  font-weight: 500;
+}
+.basket-items-section .basket-cards .basket-card .card-btns button i {
+  font-size: 20px;
+  color: rgba(33, 33, 33, 0.7490196078);
+}
+.basket-items-section .basket-cards .basket-card .card-btns button span {
+  display: none;
+}
+@media (min-width: 992px) {
+  .basket-items-section .basket-cards .basket-card .card-btns button span {
+    display: block;
+  }
+}
+.basket-items-section .invoice-panel {
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 32px 24px;
+  margin-top: 1.5rem;
+}
+@media (min-width: 992px) {
+  .basket-items-section .invoice-panel {
+    margin: 0;
+  }
+}
+.basket-items-section .invoice-panel .panel-main {
+  border-bottom: 1px dashed #d0d0d0;
+}
+.basket-items-section .invoice-panel .panel-main > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.basket-items-section .invoice-panel .panel-main > div:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+}
+.basket-items-section .invoice-panel .panel-main > div p {
+  margin: 0;
+}
+.basket-items-section .invoice-panel .panel-promo {
+  margin-top: 22px;
+  position: relative;
+}
+.basket-items-section .invoice-panel .panel-promo input {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  height: 48px;
+  border: 1px solid #dbdbdb;
+  padding-left: 1rem;
+  padding-right: 7.2rem;
+}
+.basket-items-section .invoice-panel .panel-promo input:focus {
+  outline: none;
+}
+.basket-items-section .invoice-panel .panel-promo button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 0px 8px 8px 0px;
+  background: #ff695e;
+  color: #fff;
+}
+.basket-items-section .confirmations {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.basket-items-section .confirmations button {
+  padding: 13px 0;
+  border-radius: 8px;
+  border: none;
+}
+.basket-items-section .confirmations button:nth-child(1) {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  background: #df4244;
+}
+.basket-items-section .confirmations button:nth-child(2) {
+  border: 1px solid #212121;
+  background-color: transparent;
 }/*# sourceMappingURL=main.css.map */

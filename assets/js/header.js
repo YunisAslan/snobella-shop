@@ -1,3 +1,11 @@
+const basketCount = document.querySelector(".basket-count");
+
+// update header counters
+document.addEventListener("DOMContentLoaded", () => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || 0;
+  basketCount.innerText = cart.length;
+});
+
 // mobile menu
 const menuBtn = document.querySelector(".menu-btn");
 const mobileMenu = document.querySelector(".mobile-menu");

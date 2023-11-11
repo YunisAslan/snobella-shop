@@ -1,5 +1,6 @@
 import { getAllProducts } from "./requests.js";
 
+const basketCount = document.querySelector(".basket-count");
 const bagsContainer = document.querySelector(".bag-section .swiper-wrapper");
 const featuredProductsContainer = document.querySelector(
   ".featured-products .swiper-wrapper"
@@ -79,6 +80,8 @@ async function getFilteredProducts() {
   discountedProducts.forEach((product) => {
     generateIntuitiveProduct(discountedProductsContainer, product);
   });
+
+  addToCart(allProducts);
 }
 
 function generateIntuitiveProduct(place, product) {
@@ -90,6 +93,7 @@ function generateIntuitiveProduct(place, product) {
     <a href="product-page.html?id=${product.id}">
       <div class="product-card">
         <div class="d-flex justify-content-between align-items-center">
+
             <div class="product-feat ${
               product.isDiscounted ? "sale" : product.isNew ? "new" : ""
             }">
@@ -135,10 +139,50 @@ function generateIntuitiveProduct(place, product) {
           </div>
 
         <div>
-            <button class="add-to-card-btn">Add to card</button>
+            <button class="add-to-cart-btn" id="${
+              product.id
+            }">Add to card</button>
         </div>
       </div>
     </a>
   </div>
   `;
+}
+
+function addToCart(products) {
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+
+  addToCartBtns.forEach((addToCartBtn) => {
+    addToCartBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const id = this.id;
+      const findedProduct = products.find((findEl) => findEl.id == id);
+
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const findedProductIndex = cart.findIndex(
+        (findEl) => findEl.id == findedProduct.id
+      );
+
+      if (findedProductIndex !== -1) {
+        cart[findedProductIndex].quantity++;
+      } else {
+        cart.push({ id: findedProduct.id, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // update basket count
+      basketCount.innerText = cart.length;
+
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Add to basket successfully",
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    });
+  });
 }
